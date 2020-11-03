@@ -1,0 +1,72 @@
+Linux
+
+man man = 명령어 모음집
+
+date = 날짜
+
+shutdown -h now =  컴퓨터 끄기{
+shutdown -r now = reboot = 재부팅
+}
+
+사용자정보 {
+whoami = 간단한 정보 출력
+id = 자신, 그룹을 알 수 있다
+}
+
+-r = 명령어를 directory에 적용할 때 대부분 사용 ex) rm -r, cp -r
+
+alias = 명령어를 사용자지정
+ex) alias ls='ls -al' = ls를 입력하면 ls -al 실행
+
+su = 관리자 권한으로 접근 {
+exit = 관리자 권한 나오기
+sudo "명령어" = 이 명령에만 관리자 권한으로 접근
+
+사용자{
+adduser 'name' = name이라는 사용자 추가
+user del -r 'name' = name이라는 사용자 제거
+}
+
+redirection{
+>(쓰기) 결과 저장  ex) cat ex1 ex2 > new = ex1과 ex2의 내용을 new파일을 생성해서 옮김
+>>(추가) 결과 추가 
+< (읽기) 데이터 입력
+}
+
+cd{ ~ 최상위 .. 상위 - 방금}
+
+cat{
+cat f1 f2 = f1과 f2의 내용을 이어서 출력
+}
+
+chmod 744 file1 = file1의 접근 권한에서 사용자에게 rwx권한을, 그룹에게는 r권한을, 기타 사용자에게는 r 권한만을 주는 것
+
+mkdir -p 1/2/3 = 존재하지 않는 1이라는 dir을 만든 후 내부에 2, 3 까지 만듦
+mkdir -r t1 t2 = t1 dir의 내부까지 t2로 복사
+
+rmdir = 빈 디렉토리 삭제 / rm -r = 비어있지 않은 이렉토리라도 삭제/ rm -f 파일 강제 삭제(위험)
+
+mv 파일명 dir명 = 그 파일을 그 dir로 이동 dir명을 존재하지 않는 이름으로 입력하면 파일 이름이 입력한 명으로 변환
+
+find -name test = test라는 파일의 위치 출력
+
+cat -n = 행 번호 표시
+
+grep 단어 * = 모든 파일에서 입력한 단어를 찾아서 출력(변수찾기에 유용)
+
+ps = 실행중인 process 출력{
+ps -a = 전체사용자 출력 (여러 사용자가 존재할 경우 유용)
+ps -f = 프로세스의 실행시간 출력(cpu 잡아먹고 이상한 프로세스 찾는 데 유용)
+PID = 부여받은 프로세스명 
+
+| = 파이프  *****
+명령어 | 명령어 = 앞의 명령어 결과를 뒤의 명령어 입력으로 사용함 
+ex1) cat /etc/passwd | grep mail = etc 내부의 passwd에서 mail이라는 문자가 적힌 라인을 찾아 출력
+ex2) ls | grep c = ls에서 c라는 글자가 들어간 파일만 출력
+ex3) ls | grep c | grep -v java = 현재 dir(ls)에서 c라는 글자가 들어간 파일 중 java 가 들어간 파일을 제외하고 출력
+
+gcc loop.c -o loop = loop.c 라는 프로세스를 백그라운드로 실행
+./loop &  = 백그라운드로 실행중인 프로세스 표시
+kill -9 PID번호 = 해당 pid의 프로세스를 강제종료
+
+touch x.txt = x.txt라는 비어있는 파일 생성

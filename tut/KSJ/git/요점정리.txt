@@ -1,0 +1,18 @@
+remote간단한 Git  및 res 주소
+
+폴더 ~ Repository 설정 - 
+git init
+git remote add origin 'Repository 주소'
+
+
+
+git status - 현재 Git과 폴더의 싱크 상태 체크
+
+git pull origin master -  지정해놓은 repository에서 폴더로 모든 자료를 끌어옴
+
+git add . - 폴더와 Repository사이에 변경된 파일이 있을 때 모든 파일 Tracking( '.' - 모든 이란 의미)
+
+git commit -m "message" - 인식할 수 있git 는 commit을 달아줌(message 남기기)
+
+git push origin master - 실제로 Git에 Push
+
