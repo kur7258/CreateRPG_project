@@ -1,0 +1,10 @@
+C:\Users\tjrwl\source\repos\TestForm\TestForm\bin\Debug\TestForm.exe.config
+C:\Users\tjrwl\source\repos\TestForm\TestForm\bin\Debug\TestForm.exe
+C:\Users\tjrwl\source\repos\TestForm\TestForm\bin\Debug\TestForm.pdb
+C:\Users\tjrwl\source\repos\TestForm\TestForm\obj\Debug\TetrisForm.csprojAssemblyReference.cache
+C:\Users\tjrwl\source\repos\TestForm\TestForm\obj\Debug\TetrisForm.Form1.resources
+C:\Users\tjrwl\source\repos\TestForm\TestForm\obj\Debug\TestForm.Properties.Resources.resources
+C:\Users\tjrwl\source\repos\TestForm\TestForm\obj\Debug\TetrisForm.csproj.GenerateResource.cache
+C:\Users\tjrwl\source\repos\TestForm\TestForm\obj\Debug\TetrisForm.csproj.CoreCompileInputs.cache
+C:\Users\tjrwl\source\repos\TestForm\TestForm\obj\Debug\TestForm.exe
+C:\Users\tjrwl\source\repos\TestForm\TestForm\obj\Debug\TestForm.pdb
