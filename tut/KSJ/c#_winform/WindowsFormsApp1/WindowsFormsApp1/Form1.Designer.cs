@@ -58,178 +58,147 @@
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.Color.Beige;
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(28, 124);
+            this.label1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.label1.ImageIndex = 1;
+            this.label1.Location = new System.Drawing.Point(28, 110);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 70);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "0";
+            this.label1.Size = new System.Drawing.Size(80, 80);
+            this.label1.TabIndex = 3;
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
-            this.label2.BackColor = System.Drawing.Color.Beige;
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(118, 124);
+            this.label2.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.label2.Location = new System.Drawing.Point(114, 110);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 70);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "0";
+            this.label2.Size = new System.Drawing.Size(80, 80);
+            this.label2.TabIndex = 1;
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
             // 
-            this.label3.BackColor = System.Drawing.Color.Beige;
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(211, 124);
+            this.label3.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.label3.Location = new System.Drawing.Point(200, 110);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 70);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "0";
+            this.label3.Size = new System.Drawing.Size(80, 80);
+            this.label3.TabIndex = 0;
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label4
             // 
-            this.label4.BackColor = System.Drawing.Color.Beige;
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(302, 124);
+            this.label4.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.label4.Location = new System.Drawing.Point(286, 110);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(70, 70);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "0";
+            this.label4.Size = new System.Drawing.Size(80, 80);
+            this.label4.TabIndex = 1;
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label5
             // 
-            this.label5.BackColor = System.Drawing.Color.Beige;
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(28, 206);
+            this.label5.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.label5.Location = new System.Drawing.Point(28, 199);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(70, 70);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "0";
+            this.label5.Size = new System.Drawing.Size(80, 80);
+            this.label5.TabIndex = 0;
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label6
             // 
-            this.label6.BackColor = System.Drawing.Color.Beige;
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(118, 206);
+            this.label6.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.label6.Location = new System.Drawing.Point(114, 199);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(70, 70);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "0";
+            this.label6.Size = new System.Drawing.Size(80, 80);
+            this.label6.TabIndex = 1;
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label7
             // 
-            this.label7.BackColor = System.Drawing.Color.Beige;
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(211, 206);
+            this.label7.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.label7.Location = new System.Drawing.Point(200, 199);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(70, 70);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "0";
+            this.label7.Size = new System.Drawing.Size(80, 80);
+            this.label7.TabIndex = 0;
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label8
             // 
-            this.label8.BackColor = System.Drawing.Color.Beige;
-            this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(302, 206);
+            this.label8.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.label8.Location = new System.Drawing.Point(286, 199);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(70, 70);
-            this.label8.TabIndex = 8;
-            this.label8.Text = "0";
+            this.label8.Size = new System.Drawing.Size(80, 80);
+            this.label8.TabIndex = 1;
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label9
             // 
-            this.label9.BackColor = System.Drawing.Color.Beige;
-            this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(28, 287);
+            this.label9.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.label9.Location = new System.Drawing.Point(28, 288);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(70, 70);
-            this.label9.TabIndex = 9;
-            this.label9.Text = "0";
+            this.label9.Size = new System.Drawing.Size(80, 80);
+            this.label9.TabIndex = 0;
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label10
             // 
-            this.label10.BackColor = System.Drawing.Color.Beige;
-            this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(118, 287);
+            this.label10.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.label10.Location = new System.Drawing.Point(114, 288);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(70, 70);
-            this.label10.TabIndex = 10;
-            this.label10.Text = "0";
+            this.label10.Size = new System.Drawing.Size(80, 80);
+            this.label10.TabIndex = 1;
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label11
             // 
-            this.label11.BackColor = System.Drawing.Color.Beige;
-            this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(211, 287);
+            this.label11.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.label11.Location = new System.Drawing.Point(200, 288);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(70, 70);
-            this.label11.TabIndex = 11;
-            this.label11.Text = "0";
+            this.label11.Size = new System.Drawing.Size(80, 80);
+            this.label11.TabIndex = 0;
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label12
             // 
-            this.label12.BackColor = System.Drawing.Color.Beige;
-            this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(302, 287);
+            this.label12.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.label12.Location = new System.Drawing.Point(286, 288);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(70, 70);
-            this.label12.TabIndex = 12;
-            this.label12.Text = "0";
+            this.label12.Size = new System.Drawing.Size(80, 80);
+            this.label12.TabIndex = 1;
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label13
             // 
-            this.label13.BackColor = System.Drawing.Color.Beige;
-            this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(28, 369);
+            this.label13.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.label13.Location = new System.Drawing.Point(28, 377);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(70, 70);
-            this.label13.TabIndex = 13;
-            this.label13.Text = "0";
+            this.label13.Size = new System.Drawing.Size(80, 80);
+            this.label13.TabIndex = 0;
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label14
             // 
-            this.label14.BackColor = System.Drawing.Color.Beige;
-            this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(118, 369);
+            this.label14.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.label14.Location = new System.Drawing.Point(114, 377);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(70, 70);
-            this.label14.TabIndex = 14;
-            this.label14.Text = "0";
+            this.label14.Size = new System.Drawing.Size(80, 80);
+            this.label14.TabIndex = 1;
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label15
             // 
-            this.label15.BackColor = System.Drawing.Color.Beige;
-            this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(211, 369);
+            this.label15.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.label15.Location = new System.Drawing.Point(200, 377);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(70, 70);
-            this.label15.TabIndex = 15;
-            this.label15.Text = "0";
+            this.label15.Size = new System.Drawing.Size(80, 80);
+            this.label15.TabIndex = 0;
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label16
             // 
-            this.label16.BackColor = System.Drawing.Color.Beige;
-            this.label16.ForeColor = System.Drawing.Color.Black;
-            this.label16.Location = new System.Drawing.Point(302, 369);
+            this.label16.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.label16.Location = new System.Drawing.Point(286, 377);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(70, 70);
-            this.label16.TabIndex = 16;
-            this.label16.Text = "0";
+            this.label16.Size = new System.Drawing.Size(80, 80);
+            this.label16.TabIndex = 1;
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
@@ -239,29 +208,28 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(404, 511);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
+            this.Controls.Add(this.label14);
             this.Controls.Add(this.label7);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label4);
             this.DoubleBuffered = true;
             this.Name = "Form1";
             this.Text = "32";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Tile_Paint);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MousePosition_MouseMove);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

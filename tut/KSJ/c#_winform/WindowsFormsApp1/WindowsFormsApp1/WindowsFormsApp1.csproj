@@ -47,6 +47,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="FillNumber.txt" />
+    <Compile Include="FillLabels.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

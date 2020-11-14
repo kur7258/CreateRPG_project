@@ -1,76 +1,178 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Drawing.Configuration;
-using System.Drawing.Drawing2D;
-using System.Drawing.Text;
-using System.Linq;
-using System.Security.Principal;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
     {
-        const int XSIZE = 4; //raw
-        const int YSIZE = 4; //column
-        Label[,] tiles;
+        //first label location
+        private int DXLocation = 28;
+        private int DYLocation = 110;
 
-        string strMousePos; //(temporary) mouse position value
+        const int TILE_X_INTERVAL = 86;
+        const int TILE_Y_INTERVAL = 89;
+        const int GRID_SIZE = 4;
+
+        //map number
+        public int[,] mapNumber = new int[GRID_SIZE, GRID_SIZE]
+            { {0,0,0,0},
+              {0,0,0,0},
+              {0,0,0,0},
+              {0,0,0,0} };
+
+        //each tile number
+        public int[,] tileNumber = new int[GRID_SIZE, GRID_SIZE];
+        //fill random number class
+        //FillNumber fillNumber = new FillNumber();
+
+        //Fill the labels in this class
+        FillLabels fillLabel = new FillLabels();
 
         //initialize
         public Form1()
         {
             InitializeComponent();
 
-            //this.BackgroundImage = Properties.Resources._2048; // full background image 
-
             //2048 title load
             pictureBox1.Load(@"D:\\programming\\vs2019\\c#_winform\\_2048.png");
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage; //auto size
+
+            
         }
 
         //default form load
+        //Background TILE
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.FormBorderStyle = FormBorderStyle.FixedSingle;
-        }
-
-        //gray background load
-        private void BackgroundBox_Paint(object sender, PaintEventArgs e)
-        {
-            e.Graphics.FillRectangle(new SolidBrush(Color.Gray), new Rectangle(20, 115, 360, 335));
-
-            e.Graphics.DrawString(strMousePos, Font, Brushes.Black, 10, 10); //(temporary)mouse position
-        }
-
-        //(temporary) output mouse position
-        private void MousePosition_MouseMove(object sender, MouseEventArgs e)
-        {
-            strMousePos = "X : " + e.X + " Y : " + e.Y;
-            Invalidate();
-        }
-
-        // >>>>tile 1~ 16 >>>>
-        private void Tile_Paint(object sender, PaintEventArgs e)
-        {
-            tiles = new Label[XSIZE, YSIZE]
-                { { label1, label2, label3, label4},
-                  { label5, label6, label7, label8},
-                  { label9, label10, label11, label12},
-                  { label13, label14, label5, label16}};
-
-            for(int x = 0; x<XSIZE; x++)
+            //(temp) Label information
+            var newLabel1 = new Label
             {
-                for(int y=0; y<YSIZE; y++)
-                {
-                    tiles[x, y].Text = "2";
-                }
+                Size = label1.Size,
+                Location = new System.Drawing.Point(DXLocation, DYLocation),
+                Font = new Font("D2coding", 24),
+                Text = "2",
+                TextAlign = ContentAlignment.MiddleCenter,
+                ForeColor = Color.White,
+                BackColor = Color.Black
+            };
+            Controls.Add(newLabel1);
+            newLabel1.BringToFront();
+
+            var newLabel2 = new Label
+            {
+                Size = label1.Size,
+                Location = new System.Drawing.Point(DXLocation + TILE_X_INTERVAL, DYLocation),
+                Font = new Font("D2coding", 24),
+                Text = "4",
+                TextAlign = ContentAlignment.MiddleCenter,
+                ForeColor = Color.White,
+                BackColor = Color.Black
+            };
+            Controls.Add(newLabel2);
+            newLabel2.BringToFront();
+
+            var newLabel3 = new Label
+            {
+                Size = label1.Size,
+                Location = new System.Drawing.Point(DXLocation, DYLocation + TILE_Y_INTERVAL),
+                Font = new Font("D2coding", 24),
+                Text = "8",
+                TextAlign = ContentAlignment.MiddleCenter,
+                ForeColor = Color.White,
+                BackColor = Color.Black
+            };
+            Controls.Add(newLabel3);
+            newLabel3.BringToFront();
+
+
+            //const int TILE_SIZE = 90;
+            //const int GRID_SIZE = 4;
+            //var clr1 = Color.Gray; //(Temp) Background tile odd
+            //var clr2 = Color.DarkGray;//(Temp) Background tile even
+
+            ////initialize the tile board
+            //_tileBoardPanel = new Panel[GRID_SIZE, GRID_SIZE];
+
+            ////double for loop to handle all rows and columns
+            //for (int x = 0;x<GRID_SIZE;x++)
+            //{
+            //    for(int y=0;y<GRID_SIZE;y++)
+            //    {
+            //        //Create new Panel control which will be one tile
+            //        var newPanel = new Panel
+            //        {
+            //            Size = new Size(TILE_SIZE, TILE_SIZE),
+            //            Location = new Point(TILE_SIZE * x+30, TILE_SIZE * y+100)
+            //        };
+
+            //        //Add to Form's Controls so that they show up
+            //        Controls.Add(newPanel);
+
+            //        //Add to our 2d array of panels for future use
+            //        _tileBoardPanel[x, y] = newPanel;
+
+            //        //Color the background
+            //        if (x % 2 == 0)
+            //            newPanel.BackColor = y % 2 != 0 ? clr1 : clr2;
+            //        else
+            //            newPanel.BackColor = y % 2 != 0 ? clr2 : clr1;
+            //    }
+            //}
+        }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            // ##
+            // #
+            tileNumber[0, 0] = 1;
+            tileNumber[0, 1] = 2;
+            tileNumber[1, 0] = 3;
+
+            switch (e.KeyCode)
+            {
+                case Keys.Right:
+
+                    for (int i = 0; i < GRID_SIZE; i++)
+                    {
+                        for(int j=0; j<GRID_SIZE-1; j++)
+                        {
+                            // When 0 in next tile 
+                            if(   (tileNumber[i,j] != 0 && tileNumber[i,j+1]==0))
+                            {
+                                tileNumber[i, j + 1] = tileNumber[i, j];
+                                tileNumber[i, j] = 0;
+                                mapNumber[i, j + 1] = 1;
+                            }
+                            // When this same as next tile
+                            else if(tileNumber[i,j]==tileNumber[i,j+1])
+                            {
+                                int sum = tileNumber[i, j] + tileNumber[i, j + 1];
+                                tileNumber[i, j + 1] = sum;
+                                tileNumber[i, j] = 0;
+                            }
+                        }
+                    }
+                    break;
+                case Keys.Left:
+                    for (int i = 1; i < GRID_SIZE; i++)
+                    {
+
+                    }
+                    break;
+                case Keys.Up:
+                    for (int i = 1; i < GRID_SIZE; i++)
+                    {
+
+                    }
+                    break;
+                case Keys.Down:
+                    for (int i = 1; i < GRID_SIZE; i++)
+                    {
+
+                    }
+                    break;
             }
-        }   
+        }
     }
 }
