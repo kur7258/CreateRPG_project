@@ -1,0 +1,8 @@
+﻿1>------ 빌드 시작: 프로젝트: 과제3, 구성: Debug Win32 ------
+1>과제3.c
+1>C:\Users\dhgus\source\repos\과제3\과제3\과제3.c(13,18): warning C4244:  '함수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+1>C:\Users\dhgus\source\repos\과제3\과제3\과제3.c(20,11): warning C4013:  'RadixSort'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+1>C:\Users\dhgus\source\repos\과제3\과제3\과제3.c(51): warning C4716:  'RadixSort': 값을 반환해야 합니다.
+1>과제3.vcxproj -> C:\Users\dhgus\source\repos\과제3\Debug\과제3.exe
+1>"과제3.vcxproj" 프로젝트를 빌드했습니다.
+========== 빌드: 성공 1, 실패 0, 최신 0, 생략 0 ==========
