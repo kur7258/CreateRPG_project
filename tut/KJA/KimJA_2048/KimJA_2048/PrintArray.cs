@@ -7,6 +7,7 @@ namespace KimJA_2048
         static void Main(string[] args)
         {
             ConsoleKeyInfo c;  //키입력
+            Console.SetWindowSize(100, 40);
 
             //배열 생성
             int[][] array = new int[4][];
@@ -17,9 +18,8 @@ namespace KimJA_2048
 
             //랜덤 함수 생성
             Random r = new Random();
-            Random r1 = new Random();
             int ran = r.Next(0, 4);
-            int ran1 = r1.Next(0, 4);
+            int ran1 = r.Next(0, 4);
             while (true)
             {
                 if (array[ran][ran1] == 0)  // 랜덤한 위치가 0인지 아닌지 확인
@@ -30,7 +30,7 @@ namespace KimJA_2048
                 else  // 0일경우 다시 랜덤 위치로 이동
                 {
                     ran = r.Next(0, 4);
-                    ran1 = r1.Next(0, 4);
+                    ran1 = r.Next(0, 4);
                     continue;
                 }
             }
@@ -43,11 +43,27 @@ namespace KimJA_2048
                 }
                 Console.WriteLine("");
             }
-            //키입력 확인 변수
-            c = Console.ReadKey();
             //반복
             while (true)
             {
+                //키입력 확인 변수
+                c = Console.ReadKey();
+                ran = r.Next(0, 4);
+                ran1 = r.Next(0, 4);
+                while (true)
+                {
+                    if (array[ran][ran1] == 0)  // 랜덤한 위치가 0인지 아닌지 확인
+                    {
+                        array[ran][ran1] = 2;   // 0이면 2를 넣는다
+                        break;
+                    }
+                    else  // 0일경우 다시 랜덤 위치로 이동
+                    {
+                        ran = r.Next(0, 4);
+                        ran1 = r.Next(0, 4);
+                        continue;
+                    }
+                }
                 switch (c.Key)
                 {
                     case ConsoleKey.LeftArrow: //왼쪽 방향키 입력
@@ -63,10 +79,6 @@ namespace KimJA_2048
                                     array[i][j] = 0;
                                     array[i][j - 1] = sum;
                                 }
-                                else if (array[i][j] == 0)
-                                {
-                                    continue;
-                                }
                                 else if (array[i][j - 1] != array[i][j])
                                 {
                                     for (int a = 0; a < array.Length; a++)
@@ -79,7 +91,6 @@ namespace KimJA_2048
                                                 array[a][b] = temp;
                                                 array[a][b + 1] = 0;
                                             }
-                                            else continue;
                                         }
                                     }
                                 }
@@ -99,10 +110,6 @@ namespace KimJA_2048
                                     array[i][j] = 0;
                                     array[i][j + 1] = sum;
                                 }
-                                else if (array[i][j] == 0)
-                                {
-                                    continue;
-                                }
                                 else if (array[i][j + 1] != array[i][j])
                                 {
                                     for (int a = 0; a < array.Length; a++)
@@ -115,7 +122,6 @@ namespace KimJA_2048
                                                 array[a][b] = temp;
                                                 array[a][b - 1] = 0;
                                             }
-                                            else continue;
                                         }
                                     }
                                 }
@@ -135,10 +141,6 @@ namespace KimJA_2048
                                     array[j][i] = 0;
                                     array[j + 1][i] = sum;
                                 }
-                                else if (array[i][j] == 0)
-                                {
-                                    continue;
-                                }
                                 else if (array[j + 1][i] != array[j][i])
                                 {
                                     for (int b = 0; b < array.Length; b++)
@@ -151,7 +153,6 @@ namespace KimJA_2048
                                                 array[a][b] = temp;
                                                 array[a - 1][b] = 0;
                                             }
-                                            else continue;
                                         }
                                     }
                                 }
@@ -171,10 +172,6 @@ namespace KimJA_2048
                                     array[j][i] = 0;
                                     array[j - 1][i] = sum;
                                 }
-                                else if (array[i][j] == 0)
-                                {
-                                    continue;
-                                }
                                 else if (array[j - 1][i] != array[j][i])
                                 {
                                     for (int b = 0; b < array.Length; b++)
@@ -187,7 +184,6 @@ namespace KimJA_2048
                                                 array[a][b] = temp;
                                                 array[a + 1][b] = 0;
                                             }
-                                            else continue;
                                         }
                                     }
                                 }
@@ -195,6 +191,7 @@ namespace KimJA_2048
                         }
                         break;
                 }
+                Console.Clear();
                 for (int i = 0; i < array.Length; i++)
                 {
                     for (int j = 0; j < array.Length; j++)
@@ -203,7 +200,6 @@ namespace KimJA_2048
                     }
                     Console.WriteLine("");
                 }
-                break;
             }
         }
     }
