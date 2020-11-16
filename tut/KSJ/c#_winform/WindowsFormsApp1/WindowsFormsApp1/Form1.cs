@@ -15,14 +15,18 @@ namespace WindowsFormsApp1
         const int GRID_SIZE = 4;
 
         //map number
-        public int[,] mapNumber = new int[GRID_SIZE, GRID_SIZE]
-            { {0,0,0,0},
-              {0,0,0,0},
-              {0,0,0,0},
-              {0,0,0,0} };
+        //private int[,] mapNumber = new int[GRID_SIZE, GRID_SIZE]
+        //    { {0,0,0,0},
+        //      {0,0,0,0},
+        //      {0,0,0,0},
+        //      {0,0,0,0} };
 
         //each tile number
-        public int[,] tileNumber = new int[GRID_SIZE, GRID_SIZE];
+        private int[,] tileNumber = new int[GRID_SIZE, GRID_SIZE];
+
+        //label array
+        private Label[,] tiles = new Label[GRID_SIZE, GRID_SIZE];
+
         //fill random number class
         //FillNumber fillNumber = new FillNumber();
 
@@ -46,44 +50,44 @@ namespace WindowsFormsApp1
         private void Form1_Load(object sender, EventArgs e)
         {
             //(temp) Label information
-            var newLabel1 = new Label
+            tiles[0,0] = new Label
             {
                 Size = label1.Size,
-                Location = new System.Drawing.Point(DXLocation, DYLocation),
+                Location = new Point(DXLocation, DYLocation),
                 Font = new Font("D2coding", 24),
                 Text = "2",
                 TextAlign = ContentAlignment.MiddleCenter,
                 ForeColor = Color.White,
                 BackColor = Color.Black
             };
-            Controls.Add(newLabel1);
-            newLabel1.BringToFront();
+            Controls.Add(tiles[0,0]);
+            tiles[0,0].BringToFront();
 
-            var newLabel2 = new Label
+            tiles[0,1] = new Label
             {
                 Size = label1.Size,
-                Location = new System.Drawing.Point(DXLocation + TILE_X_INTERVAL, DYLocation),
+                Location = new Point(DXLocation + TILE_X_INTERVAL, DYLocation),
                 Font = new Font("D2coding", 24),
                 Text = "4",
                 TextAlign = ContentAlignment.MiddleCenter,
                 ForeColor = Color.White,
                 BackColor = Color.Black
             };
-            Controls.Add(newLabel2);
-            newLabel2.BringToFront();
+            Controls.Add(tiles[0,1]);
+            tiles[0,1].BringToFront();
 
-            var newLabel3 = new Label
+            tiles[1,0] = new Label
             {
                 Size = label1.Size,
-                Location = new System.Drawing.Point(DXLocation, DYLocation + TILE_Y_INTERVAL),
+                Location = new Point(DXLocation, DYLocation + TILE_Y_INTERVAL),
                 Font = new Font("D2coding", 24),
                 Text = "8",
                 TextAlign = ContentAlignment.MiddleCenter,
                 ForeColor = Color.White,
                 BackColor = Color.Black
             };
-            Controls.Add(newLabel3);
-            newLabel3.BringToFront();
+            Controls.Add(tiles[1,0]);
+            tiles[1,0].BringToFront();
 
 
             //const int TILE_SIZE = 90;
@@ -133,23 +137,29 @@ namespace WindowsFormsApp1
             {
                 case Keys.Right:
 
-                    for (int i = 0; i < GRID_SIZE; i++)
+                    for(int outter = 0; outter<GRID_SIZE; outter++) // 단순반복
                     {
-                        for(int j=0; j<GRID_SIZE-1; j++)
+                        for (int j = 0; j < GRID_SIZE-1; j++)
                         {
-                            // When 0 in next tile 
-                            if(   (tileNumber[i,j] != 0 && tileNumber[i,j+1]==0))
+                            for(int i=0; i<GRID_SIZE; i++)
                             {
-                                tileNumber[i, j + 1] = tileNumber[i, j];
-                                tileNumber[i, j] = 0;
-                                mapNumber[i, j + 1] = 1;
-                            }
-                            // When this same as next tile
-                            else if(tileNumber[i,j]==tileNumber[i,j+1])
-                            {
-                                int sum = tileNumber[i, j] + tileNumber[i, j + 1];
-                                tileNumber[i, j + 1] = sum;
-                                tileNumber[i, j] = 0;
+                                // When 0 in next tile 
+                                if(tileNumber[i,j] != 0 && tileNumber[i,j+1]==0)
+                                {
+                                    tileNumber[i, j+1] = tileNumber[i, j];
+                                    tileNumber[i, j] = 0;
+                                    tiles[i, j].Left = DXLocation + (TILE_X_INTERVAL * (j + 1)); //?
+                                    tiles[i, j+1] = tiles[i, j];  //?
+                                    tiles[i, j] = null;
+                                }
+
+                                // When this same as next tile
+                                //else if(tileNumber[i,j]==tileNumber[i,j+1])
+                                //{
+                                //    int sum = tileNumber[i, j] + tileNumber[i, j + 1];
+                                //    tileNumber[i, j + 1] = sum;
+                                //    tileNumber[i, j] = 0;
+                                //}
                             }
                         }
                     }
