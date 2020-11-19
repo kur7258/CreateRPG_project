@@ -43,21 +43,56 @@ namespace _2048
                         }
                         if(arr[i, j] == arr[i - 1, j])
                         {
-                            arr[i - 1, j] += arr[i, j];
-                            arr[i, j] = 0;
-                        }
-                        if (arr[i, j] != arr[i - 1, j])
-                        {
-                            if (arr[0, j] != 0 && i == 1)
-                                break;
-                            if (i == 1)
+                            if (arr[0, j] == arr[i, j] && arr[1, j] == arr[i, j]
+                                && arr[2, j] == arr[i, j] && arr[3, j] == arr[i, j])
                             {
-                                arr[i - 1, j] = arr[i, j];
-                                arr[i, j] = 0;
+                                arr[0, j] += arr[0, j];
+                                arr[1, j] += arr[1, j];
+                                arr[2, j] = 0;
+                                arr[3, j] = 0;
                             }
                             else
                             {
-                                arr[i - 2, j] = arr[i - 1, j];
+                                switch (i)
+                                {
+                                    case 1:
+                                        arr[i - 1, j] += arr[i, j];
+                                        arr[i, j] = 0;
+                                        break;
+                                    case 2:
+                                        if (arr[i, j] != arr[i - 2, j])
+                                        {
+                                            arr[i - 1, j] += arr[i, j];
+                                            arr[i, j] = 0;
+                                        }
+                                        else
+                                        {
+                                            arr[i - 2, j] += arr[i - 1, j];
+                                            arr[i - 1, j] = 0;
+                                        }
+                                        break;
+                                    case 3:
+                                        if (arr[i, j] != arr[i - 3, j] && arr[i, j] != arr[i - 2, j])
+                                        {
+                                            arr[i - 1, j] += arr[i, j];
+                                            arr[i, j] = 0;
+                                        }
+                                        else
+                                        {
+                                            arr[i - 2, j] += arr[i - 1, j];
+                                            arr[i - 1, j] = 0;
+                                        }
+                                        break;
+
+                                }
+                            }
+                        }
+                        if (arr[i, j] != arr[i - 1, j])
+                        {
+                            if (arr[i - 1, j] != 0)
+                                continue;
+                            else
+                            {
                                 arr[i - 1, j] = arr[i, j];
                                 arr[i, j] = 0;
                             }
@@ -81,8 +116,15 @@ namespace _2048
                         }
                         if (arr[i, j] == arr[i + 1, j])
                         {
-                            arr[i + 1, j] += arr[i, j];
-                            arr[i, j] = 0;
+                            if (i == 3)
+                            {
+                                break;
+                            }
+                            else
+                            {
+                                arr[i + 1, j] += arr[i, j];
+                                arr[i, j] = 0;
+                            }
                         }
                         if (arr[i, j] != arr[i + 1, j])
                         {
@@ -119,8 +161,15 @@ namespace _2048
                         }
                         if (arr[j, i] == arr[j , i - 1])
                         {
-                            arr[j, i - 1] += arr[j, i];
-                            arr[j, i] = 0;
+                            if (i == 0)
+                            {
+                                break;
+                            }
+                            else
+                            {
+                                arr[j, i - 1] += arr[j, i];
+                                arr[j, i] = 0;
+                            }
                         }
                         if (arr[j, i] != arr[j, i - 1])
                         {
@@ -157,8 +206,15 @@ namespace _2048
                         }
                         if (arr[j, i] == arr[j, i + 1])
                         {
-                            arr[j, i + 1] += arr[j, i];
-                            arr[j, i] = 0;
+                            if (i == 3)
+                            {
+                                break;
+                            }
+                            else
+                            {
+                                arr[j, i + 1] += arr[j, i];
+                                arr[j, i] = 0;
+                            }
                         }
                         if (arr[j, i] != arr[j, i + 1])
                         {
@@ -186,7 +242,7 @@ namespace _2048
         static void Main(string[] args)
         {
             Console.SetWindowSize(30, 15);//창크기지정(가로,세로)
-            int[,] Array = new int[100, 100];
+            int[,] Array = new int[4, 4];
             int i, j, k = 0, e, f;
        
             //array 초기화
@@ -235,8 +291,9 @@ namespace _2048
                                         Array[e, f] = 2;
                                         Console.WriteLine();
                                         PrintArray UpArray = new PrintArray(Array);
+                                        break;
                                     }
-                                    break;
+                               
                                 }
                                 break;
                             case ConsoleKey.DownArrow:
@@ -251,8 +308,9 @@ namespace _2048
                                         Array[e, f] = 2;
                                         Console.WriteLine();
                                         PrintArray DownArray = new PrintArray(Array);
+                                        break;
                                     }
-                                    break;
+                                    
                                 }
                                 break;
                             case ConsoleKey.LeftArrow:
@@ -267,8 +325,9 @@ namespace _2048
                                         Array[e, f] = 2;
                                         Console.WriteLine();
                                         PrintArray LeftArray = new PrintArray(Array);
+                                        break;
                                     }
-                                    break;
+                                    
                                 }
                                 break;
                             case ConsoleKey.RightArrow:
@@ -283,8 +342,9 @@ namespace _2048
                                         Array[e, f] = 2;
                                         Console.WriteLine();
                                         PrintArray RightArray = new PrintArray(Array);
+                                        break;
                                     }
-                                    break;
+                                   
                                 }
                                 break;
                         }
