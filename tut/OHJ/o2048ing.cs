@@ -60,6 +60,7 @@ namespace _2048
                                         arr[i, j] = 0;
                                         break;
                                     case 2:
+                                    case 3:
                                         if (arr[i, j] != arr[i - 2, j])
                                         {
                                             arr[i - 1, j] += arr[i, j];
@@ -68,19 +69,8 @@ namespace _2048
                                         else
                                         {
                                             arr[i - 2, j] += arr[i - 1, j];
-                                            arr[i - 1, j] = 0;
-                                        }
-                                        break;
-                                    case 3:
-                                        if (arr[i, j] != arr[i - 3, j] && arr[i, j] != arr[i - 2, j])
-                                        {
-                                            arr[i - 1, j] += arr[i, j];
+                                            arr[i - 1, j] = arr[i, j];
                                             arr[i, j] = 0;
-                                        }
-                                        else
-                                        {
-                                            arr[i - 2, j] += arr[i - 1, j];
-                                            arr[i - 1, j] = 0;
                                         }
                                         break;
 
@@ -116,32 +106,49 @@ namespace _2048
                         }
                         if (arr[i, j] == arr[i + 1, j])
                         {
-                            if (i == 3)
+                            if (arr[0, j] == arr[i, j] && arr[1, j] == arr[i, j]
+                                && arr[2, j] == arr[i, j] && arr[3, j] == arr[i, j])
                             {
-                                break;
+                                arr[2, j] += arr[0, j];
+                                arr[3, j] += arr[1, j];
+                                arr[0, j] = 0;
+                                arr[1, j] = 0;
                             }
                             else
                             {
-                                arr[i + 1, j] += arr[i, j];
-                                arr[i, j] = 0;
+                                switch (i)
+                                {
+                                    case 2:
+                                        arr[i + 1, j] += arr[i, j];
+                                        arr[i, j] = 0;
+                                        break;
+                                    case 1:
+                                    case 0:
+                                        if (arr[i, j] != arr[i + 2, j])
+                                        {
+                                            arr[i + 1, j] += arr[i, j];
+                                            arr[i, j] = 0;
+                                        }
+                                        else
+                                        {
+                                            arr[i + 2, j] += arr[i + 1, j];
+                                            arr[i + 1, j] = arr[i, j];
+                                            arr[i, j] = 0;
+                                        }
+                                        break;
+                                }
                             }
                         }
                         if (arr[i, j] != arr[i + 1, j])
                         {
-                            if (arr[3, j] != 0 && i == 2)
-                                break;
-                            if (i == 2)
-                            {
-                                arr[i + 1, j] = arr[i, j];
-                                arr[i, j] = 0;
-                            }
+                            if (arr[i + 1, j] != 0)
+                                continue;
                             else
                             {
-                                arr[i + 2, j] = arr[i + 1, j];
                                 arr[i + 1, j] = arr[i, j];
                                 arr[i, j] = 0;
                             }
-                        }
+                        } 
                         else
                             k = 5;
                     }
@@ -159,30 +166,48 @@ namespace _2048
                         {
                             continue;
                         }
-                        if (arr[j, i] == arr[j , i - 1])
+                        if (arr[j, i] == arr[j, i - 1])
                         {
-                            if (i == 0)
+                            if (arr[j, 0] == arr[j, i] && arr[j, 1] == arr[j, i]
+                                && arr[j, 2] == arr[j, i] && arr[j, 3] == arr[j, i])
                             {
-                                break;
+                                arr[j, 0] += arr[j, 2];
+                                arr[j, 1] += arr[j, 3];
+                                arr[j, 2] = 0;
+                                arr[j, 3] = 0;
                             }
                             else
                             {
-                                arr[j, i - 1] += arr[j, i];
-                                arr[j, i] = 0;
+                                switch (i)
+                                {
+                                    case 1:
+                                        arr[j, i - 1] += arr[j, i];
+                                        arr[j, i] = 0;
+                                        break;
+                                    case 2:
+                                    case 3:
+                                        if (arr[j, i] != arr[j, i - 2])
+                                        {
+                                            arr[j, i - 1] += arr[j, i];
+                                            arr[j, i] = 0;
+                                        }
+                                        else
+                                        {
+                                            arr[j, i - 2] += arr[j, i - 1];
+                                            arr[j, i - 1] = arr[j, i];
+                                            arr[j, i] = 0;
+                                        }
+                                        break;
+
+                                }
                             }
                         }
                         if (arr[j, i] != arr[j, i - 1])
                         {
-                            if (arr[j, 0] != 0 && i == 1)
-                                break;
-                            if (i == 1)
-                            {
-                                arr[j, i - 1] = arr[j, i];
-                                arr[j, i] = 0;
-                            }
+                            if (arr[j, i - 1] != 0)
+                                continue;
                             else
                             {
-                                arr[j, i - 2] = arr[j, i - 1];
                                 arr[j, i - 1] = arr[j, i];
                                 arr[j, i] = 0;
                             }
@@ -206,28 +231,46 @@ namespace _2048
                         }
                         if (arr[j, i] == arr[j, i + 1])
                         {
-                            if (i == 3)
+                            if (arr[j, 0] == arr[j, i] && arr[j, 1] == arr[j, i]
+                                && arr[j, 2] == arr[j, i] && arr[j, 3] == arr[j, i])
                             {
-                                break;
+                                arr[j, 2] += arr[j, 0];
+                                arr[j, 3] += arr[j, 1];
+                                arr[j, 0] = 0;
+                                arr[j, 1] = 0;
                             }
                             else
                             {
-                                arr[j, i + 1] += arr[j, i];
-                                arr[j, i] = 0;
+                                switch (i)
+                                {
+                                    case 2:
+                                        arr[j, i + 1] += arr[j, i];
+                                        arr[j, i] = 0;
+                                        break;
+                                    case 1:
+                                    case 0:
+                                        if (arr[j, i] != arr[j, i + 2])
+                                        {
+                                            arr[j, i + 1] += arr[j, i];
+                                            arr[j, i] = 0;
+                                        }
+                                        else
+                                        {
+                                            arr[j, i + 2] += arr[j, i + 1];
+                                            arr[j, i + 1] = arr[j, i];
+                                            arr[j, i] = 0;
+                                        }
+                                        break;
+
+                                }
                             }
                         }
                         if (arr[j, i] != arr[j, i + 1])
                         {
-                            if (arr[j, 3] != 0 && i == 2)
-                                break;
-                            if (i == 2)
-                            {
-                                arr[j, i + 1] = arr[j, i];
-                                arr[j, i] = 0;
-                            }
+                            if (arr[j, i + 1] != 0)
+                                continue;
                             else
                             {
-                                arr[j, i + 2] = arr[j, i + 1];
                                 arr[j, i + 1] = arr[j, i];
                                 arr[j, i] = 0;
                             }
