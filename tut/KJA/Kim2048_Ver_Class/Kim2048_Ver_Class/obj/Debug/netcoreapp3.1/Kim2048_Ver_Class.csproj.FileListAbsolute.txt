@@ -1,0 +1,13 @@
+C:\Users\rlawo\Documents\git\CreateRPG_project\tut\KJA\Kim2048_Ver_Class\Kim2048_Ver_Class\bin\Debug\netcoreapp3.1\Kim2048_Ver_Class.exe
+C:\Users\rlawo\Documents\git\CreateRPG_project\tut\KJA\Kim2048_Ver_Class\Kim2048_Ver_Class\bin\Debug\netcoreapp3.1\Kim2048_Ver_Class.deps.json
+C:\Users\rlawo\Documents\git\CreateRPG_project\tut\KJA\Kim2048_Ver_Class\Kim2048_Ver_Class\bin\Debug\netcoreapp3.1\Kim2048_Ver_Class.runtimeconfig.json
+C:\Users\rlawo\Documents\git\CreateRPG_project\tut\KJA\Kim2048_Ver_Class\Kim2048_Ver_Class\bin\Debug\netcoreapp3.1\Kim2048_Ver_Class.runtimeconfig.dev.json
+C:\Users\rlawo\Documents\git\CreateRPG_project\tut\KJA\Kim2048_Ver_Class\Kim2048_Ver_Class\bin\Debug\netcoreapp3.1\Kim2048_Ver_Class.dll
+C:\Users\rlawo\Documents\git\CreateRPG_project\tut\KJA\Kim2048_Ver_Class\Kim2048_Ver_Class\bin\Debug\netcoreapp3.1\Kim2048_Ver_Class.pdb
+C:\Users\rlawo\Documents\git\CreateRPG_project\tut\KJA\Kim2048_Ver_Class\Kim2048_Ver_Class\obj\Debug\netcoreapp3.1\Kim2048_Ver_Class.csprojAssemblyReference.cache
+C:\Users\rlawo\Documents\git\CreateRPG_project\tut\KJA\Kim2048_Ver_Class\Kim2048_Ver_Class\obj\Debug\netcoreapp3.1\Kim2048_Ver_Class.AssemblyInfoInputs.cache
+C:\Users\rlawo\Documents\git\CreateRPG_project\tut\KJA\Kim2048_Ver_Class\Kim2048_Ver_Class\obj\Debug\netcoreapp3.1\Kim2048_Ver_Class.AssemblyInfo.cs
+C:\Users\rlawo\Documents\git\CreateRPG_project\tut\KJA\Kim2048_Ver_Class\Kim2048_Ver_Class\obj\Debug\netcoreapp3.1\Kim2048_Ver_Class.csproj.CoreCompileInputs.cache
+C:\Users\rlawo\Documents\git\CreateRPG_project\tut\KJA\Kim2048_Ver_Class\Kim2048_Ver_Class\obj\Debug\netcoreapp3.1\Kim2048_Ver_Class.dll
+C:\Users\rlawo\Documents\git\CreateRPG_project\tut\KJA\Kim2048_Ver_Class\Kim2048_Ver_Class\obj\Debug\netcoreapp3.1\Kim2048_Ver_Class.pdb
+C:\Users\rlawo\Documents\git\CreateRPG_project\tut\KJA\Kim2048_Ver_Class\Kim2048_Ver_Class\obj\Debug\netcoreapp3.1\Kim2048_Ver_Class.genruntimeconfig.cache
