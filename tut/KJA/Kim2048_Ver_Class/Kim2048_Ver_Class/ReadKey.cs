@@ -10,7 +10,7 @@ namespace Kim2048_Ver_Class
 
         public void LeftKey()
         {
-            for (int k = 0; k < 4; k++)
+            for (int k = 0; k < 5; k++)
             {
                 for (int i = 0; i < array.Length; i++) // 세로행 반복
                 {
@@ -45,7 +45,7 @@ namespace Kim2048_Ver_Class
         }
         public void RightKey()
         {
-            for (int k = 0; k < 4; k++)
+            for (int k = 0; k < 5; k++)
             {
                 for (int i = 0; i < array.Length; i++)
                 {
@@ -81,7 +81,7 @@ namespace Kim2048_Ver_Class
         }
         public void UpKey()
         {
-            for (int k = 0; k < 4; k++)
+            for (int k = 0; k < 5; k++)
             {
                 for (int i = 0; i < array.Length; i++)
                 {
@@ -116,7 +116,7 @@ namespace Kim2048_Ver_Class
         }
         public void DownKey()
         {
-            for (int k = 0; k < 4; k++)
+            for (int k = 0; k < 5; k++)
             {
                 for (int i = 0; i < array.Length; i++)
                 {
