@@ -1,0 +1,34 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.InteropServices;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace WindowsFormsApp1
+{
+    class FillNumber
+    {
+        Form1 f1 = new Form1();
+
+        //fill 2 in random tile
+        public void FillRandNumber()
+        {
+            while(true)
+            {
+                Random rand = new Random();
+                int xRand = rand.Next(0, f1.tiles.GetLength(0));
+                int yRand = rand.Next(0, f1.tiles.GetLength(1));
+
+                int tile_value = Int32.Parse(f1.tiles[xRand, yRand].Text);
+
+                if (tile_value == 0)
+                {
+                    f1.tiles[xRand, yRand].Text = "2";
+                    break;
+                }
+                else continue;
+            }
+        }
+    }
+}
