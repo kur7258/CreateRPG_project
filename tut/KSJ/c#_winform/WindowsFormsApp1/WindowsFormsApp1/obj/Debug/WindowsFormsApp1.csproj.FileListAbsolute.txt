@@ -8,3 +8,13 @@ D:\programming\vs2019\c#_winform\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\Win
 D:\programming\vs2019\c#_winform\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
 D:\programming\vs2019\c#_winform\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 D:\programming\vs2019\c#_winform\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+D:\programming\createRPG\tut\KSJ\c#_winform\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+D:\programming\createRPG\tut\KSJ\c#_winform\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+D:\programming\createRPG\tut\KSJ\c#_winform\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+D:\programming\createRPG\tut\KSJ\c#_winform\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+D:\programming\createRPG\tut\KSJ\c#_winform\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+D:\programming\createRPG\tut\KSJ\c#_winform\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+D:\programming\createRPG\tut\KSJ\c#_winform\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+D:\programming\createRPG\tut\KSJ\c#_winform\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+D:\programming\createRPG\tut\KSJ\c#_winform\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+D:\programming\createRPG\tut\KSJ\c#_winform\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
