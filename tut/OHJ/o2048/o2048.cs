@@ -42,8 +42,8 @@ namespace _2048
             while (true)
             {
                 ConsoleKeyInfo keys;
-                do
-                {
+                while(true)
+                { 
                     if (Console.KeyAvailable)
                     {
                         keys = Console.ReadKey(true);
@@ -119,7 +119,7 @@ namespace _2048
                                 break;
                         }
                     }
-                } while (true);
+                }
             }
         }
     }
